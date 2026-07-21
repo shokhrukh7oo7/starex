@@ -5,58 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>STAREX</title>
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="logo-wrapper">
-          <a href="/index.html">
-            <img src="/assets/images/logo.png" alt="STAREX Logo" class="logo" />
-          </a>
-        </div>
+    <section
+      class="hero"
+      style="background: url(&quot;/assets/images/home/banner.jpg&quot;)"
+    >
+      <header>
+        <div class="container">
+          <div class="header-wrapper">
+            <div class="logo-wrapper">
+              <a href="/index.html">
+                <img
+                  src="/assets/images/logo.png"
+                  alt="STAREX Logo"
+                  class="logo"
+                />
+              </a>
+            </div>
 
-        <div class="navbar-menu">
-          <ul>
-            <li>
-              <a href="/assets/pages/about.html">О нас</a>
-            </li>
-            <li>
-              <a href="/assets/pages/services.html">Услуги</a>
-            </li>
-            <li>
-              <a href="/assets/pages/clients.html">Клиентам</a>
-            </li>
-            <li>
-              <a href="/assets/pages/vacancy.html">Вакансии</a>
-            </li>
-            <li>
-              <a href="/assets/pages/blog.html">Блог</a>
-            </li>
-            <li>
-              <a href="/assets/pages/contact.html">Контакты</a>
-            </li>
-          </ul>
-        </div>
+            <div class="mobile-menu" id="mobileMenu">
+              <div class="navbar-menu">
+                <ul>
+                  <li>
+                    <a href="/assets/pages/about.html" class="active">О нас</a>
+                  </li>
+                  <li>
+                    <a href="/assets/pages/services.html">Услуги</a>
+                  </li>
+                  <li>
+                    <a href="/assets/pages/clients.html">Клиентам</a>
+                  </li>
+                  <li>
+                    <a href="/assets/pages/vacancy.html">Вакансии</a>
+                  </li>
+                  <li>
+                    <a href="/assets/pages/blog.html">Блог</a>
+                  </li>
+                  <li>
+                    <a href="/assets/pages/contact.html">Контакты</a>
+                  </li>
+                </ul>
+              </div>
 
-        <div class="navbar-right-wrapper">
-          <div class="navbar-phone-wrapper">
-            <span>пн-пт 10:00-19:00</span>
-            <a href="tel:+998711234561">+998 (71) 123-45-61</a>
-          </div>
+              <div class="navbar-right-wrapper">
+                <div class="navbar-phone-wrapper">
+                  <span>пн-пт 10:00-19:00</span>
+                  <a href="tel:+998711234561">+998 (71) 123-45-61</a>
+                </div>
 
-          <div class="navbar-right-btn-wrapper">
-            <button>Вызвать курьера</button>
-            <button>
-              <img src="/assets/images/user.svg" alt="icon" />
-              Кабинет
+                <div class="navbar-right-btn-wrapper">
+                  <button>Вызвать курьера</button>
+                  <button>
+                    <img src="/assets/images/user.svg" alt="icon" />
+                    Кабинет
+                  </button>
+                </div>
+              </div>
+
+              <button class="mobile-close" aria-label="Close">
+                <img src="./assets/images/close.svg" alt="image" />
+              </button>
+            </div>
+
+            <button class="burger-btn" id="burgerBtn">
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </section>
 
     <main></main>
 
     <footer></footer>
+
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
