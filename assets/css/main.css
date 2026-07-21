@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Aeroport";
+  src: url("../fonts/Aeroport-regular-trial.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeroport";
+  src: url("../fonts/Aeroport-medium-trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeroport";
+  src: url("../fonts/Aeroport-bold-trial.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeroport";
+  src: url("../fonts/Aeroport-light-trial.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --blue: #192189;
+    --green: #B3DB25;
+    
+    --fs-sm: clamp(15px, 1.3vw, 20px);
+    --fs-md: clamp(20px, 2.5vw, 32px);
+    --fs-lg: clamp(28px, 3vw, 48px);
+    --fs-xl: clamp(32px, 4vw, 72px);
+}
+
+/* RESET */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+p {
+  margin: 0;
+}
+::placeholder {
+  color: unset;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Aeroport", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 clamp(25px, 3vw, 50px);
+}
