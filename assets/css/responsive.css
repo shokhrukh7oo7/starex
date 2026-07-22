@@ -35,3 +35,44 @@
     display: block;
   }
 }
+@media (max-width: 992px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero > .container:last-child {
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    background-position: 70% center !important;
+  }
+
+  .hero-body {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-body .tab-wrapper {
+    max-width: 100%;
+  }
+
+  .hero-body .tab-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hero-body .tab-group button {
+    border-radius: var(--br-md);
+  }
+
+  .hero-body .tab-content {
+    margin-top: 12px;
+    border-radius: var(--br-md);
+    overflow: hidden;
+  }
+}
+
