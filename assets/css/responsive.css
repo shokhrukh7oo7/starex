@@ -74,5 +74,15 @@
     border-radius: var(--br-md);
     overflow: hidden;
   }
+  .hero-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 }
-
+@media (max-width: 577px) {
+  .hero-body h1 {
+    font-size: var(--fs-lg);
+  }
+}
