@@ -36,6 +36,7 @@
   --black: #000000;
   --grey: #e5e7eb;
   --black-grey: #6a7282;
+  --text-grey: #4a5565;
   --blue: #192189;
   --green: #b3db25;
 
@@ -425,6 +426,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: clamp(8px, 1vw, 16px);
   margin: clamp(25px, 2.5vw, 50px) 0;
 }
@@ -537,7 +539,7 @@ body {
   align-items: start;
   gap: clamp(16px, 2vw, 32px);
   border-radius: var(--br-xl);
-  padding: clamp(45px, 5vw, 90px) clamp(25px, 3vw, 50px);
+  padding: clamp(25px, 5vw, 90px) clamp(15px, 3vw, 50px);
   margin-bottom: clamp(25px, 3vw, 50px);
 }
 .banner-wrapper h1 {
@@ -570,3 +572,68 @@ body {
   color: var(--white);
 }
 /* BANNER END */
+
+/* EXTRA SECTION START */
+.extra-section {
+  padding: clamp(25px, 3vw, 50px) 0;
+}
+.extra-section .header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: clamp(8px, 1vw, 16px);
+}
+.extra-section .header-container p {
+  color: var(--black-grey);
+  font-size: var(--fs-xs);
+  letter-spacing: 0;
+}
+.extra-section .header-container h2 {
+  color: var(--black);
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.extra-section .content-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(4px, 0.5vw, 8px);
+  margin: clamp(25px, 3vw, 50px) 0;
+}
+.extra-section .content-container .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background-color: var(--blue);
+  border-radius: var(--br-lg);
+  padding: clamp(16px, 2vw, 32px);
+  gap: clamp(16px, 2vw, 32px);
+}
+.extra-section .content-container .item .icon-wrapper {
+  background-color: var(--green);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+.extra-section .content-container .item h1 {
+  color: var(--green);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -1.5px;
+}
+.extra-section .content-container .item span {
+  font-size: var(--fs-exxs);
+  color: var(--black-grey);
+  line-height: 150%;
+  letter-spacing: 0;
+}
+.extra-section .content-container .item p {
+  color: var(--white);
+  font-size: var(--fs-xs);
+}
+/* EXTRA SECTION END */

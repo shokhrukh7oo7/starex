@@ -59,6 +59,9 @@
     align-items: center;
     text-align: center;
   }
+  .extra-section .content-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 768px) {
   .hero {
@@ -99,5 +102,13 @@
   }
   .our-services .our-services-body {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .extra-section .content-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .extra-section .content-container .item {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
