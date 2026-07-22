@@ -523,3 +523,50 @@ body {
   inset: 0;
 }
 /* HOME SERVICES END */
+
+/* BANNER START */
+.banner-wrapper {
+  height: auto;
+  aspect-ratio: 1904 / 536;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 50% 25% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: clamp(16px, 2vw, 32px);
+  border-radius: var(--br-xl);
+  padding: clamp(45px, 5vw, 90px) clamp(25px, 3vw, 50px);
+  margin-bottom: clamp(25px, 3vw, 50px);
+}
+.banner-wrapper h1 {
+  color: var(--green);
+  font-size: var(--fs-lg);
+  line-height: 120%;
+  letter-spacing: -1.5px;
+  width: 100%;
+  max-width: 671px;
+}
+.banner-wrapper p {
+  color: var(--white);
+  font-size: var(--fs-xs);
+  line-height: 150%;
+  letter-spacing: 0;
+  width: 100%;
+  max-width: 671px;
+}
+.banner-wrapper a {
+  color: var(--blue);
+  background-color: var(--green);
+  text-transform: uppercase;
+  font-size: var(--fs-exxs);
+  padding: clamp(10px, 1.5vw, 20px) clamp(20px, 3vw, 40px);
+  border-radius: calc(var(--br-md) + 4px);
+  transition: all 0.3s ease-out;
+}
+.banner-wrapper a:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+/* BANNER END */

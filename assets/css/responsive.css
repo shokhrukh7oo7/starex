@@ -54,6 +54,11 @@
   .our-services .our-services-body {
     grid-template-columns: repeat(2, 1fr);
   }
+  .banner-wrapper {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 @media (max-width: 768px) {
   .hero {
