@@ -414,6 +414,165 @@
           </div>
         </div>
       </section>
+
+      <section>
+        <div class="container">
+          <div class="reviews-section">
+            <div class="reviews-container">
+              <span class="reviews-subtitle">ОТЗЫВЫ</span>
+              <h2 class="reviews-title">Что говорят о нас</h2>
+
+              <!-- Контейнер Swiper -->
+              <div class="swiper reviews-slider">
+                <div class="swiper-wrapper">
+                  <!-- Слайд 1 -->
+                  <div class="swiper-slide">
+                    <div class="review-card">
+                      <div class="review-content">
+                        <p class="review-text">
+                          Современная и эффективная доставка. Хочу отметить
+                          высокий уровень сервиса и профессиональный подход
+                          компании.
+                        </p>
+
+                        <button
+                          class="video-btn"
+                          data-video="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                        >
+                          <div class="video-avatar">
+                            <img
+                              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop"
+                              alt="Превью"
+                            />
+                            <span class="play-icon">▶</span>
+                          </div>
+                          <span class="video-btn-text"
+                            >СМОТРЕТЬ<br />ВИДЕО ОТЗЫВ</span
+                          >
+                        </button>
+
+                        <div class="review-author">
+                          <span class="author-name">— Анна и Сергей</span>
+                          <span class="author-role">владелица кофейни</span>
+                        </div>
+                      </div>
+
+                      <div class="review-next-btn">
+                        <svg
+                          width="100"
+                          height="12"
+                          viewBox="0 0 100 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 6H98M98 6L91 1M98 6L91 11"
+                            stroke="#2B3688"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Слайд 2 (Пример) -->
+                  <div class="swiper-slide">
+                    <div class="review-card">
+                      <div class="review-content">
+                        <blockquote class="review-text">
+                          Надежный партнер для нашего бизнеса.<br />
+                          Все заказы приходят вовремя,<br />
+                          а поддержка всегда на связи.
+                        </blockquote>
+
+                        <button
+                          class="video-btn"
+                          data-video="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                        >
+                          <div class="video-avatar">
+                            <img
+                              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop"
+                              alt="Превью"
+                            />
+                            <span class="play-icon">▶</span>
+                          </div>
+                          <span class="video-btn-text"
+                            >СМОТРЕТЬ<br />ВИДЕО ОТЗЫВ</span
+                          >
+                        </button>
+
+                        <div class="review-author">
+                          <span class="author-name">— Алексей</span>
+                          <span class="author-role">директор сети</span>
+                        </div>
+                      </div>
+
+                      <div class="review-next-btn">
+                        <svg
+                          width="100"
+                          height="12"
+                          viewBox="0 0 100 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 6H98M98 6L91 1M98 6L91 11"
+                            stroke="#2B3688"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Точки пагинации -->
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div
+            class="banner-wrapper"
+            style="
+              background:
+                linear-gradient(
+                  90deg,
+                  rgba(0, 0, 0, 0.85) 0%,
+                  rgba(0, 0, 0, 0.4) 50%,
+                  rgba(0, 0, 0, 0) 100%
+                ),
+                url(&quot;/assets/images/home/banner3.jpg&quot;);
+            "
+          >
+            <h1>Все услуги Starex — прямо в вашем Telegram</h1>
+            <p>
+              Вызывайте курьера, рассчитывайте стоимость и отслеживайте посылки
+              по Узбекистану за пару кликов без перехода на сайт. Быстро, удобно
+              и всегда под рукой.
+            </p>
+            <a href="#">Запустить Telegram-бот</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Модальное окно для видео -->
+      <div class="video-modal" id="videoModal">
+        <div class="video-modal-overlay"></div>
+        <div class="video-modal-content">
+          <button class="video-modal-close">&times;</button>
+          <iframe
+            id="videoIframe"
+            src=""
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </main>
 
     <footer></footer>

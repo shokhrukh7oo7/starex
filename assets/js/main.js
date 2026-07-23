@@ -36,18 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
 // =========================== PARTNER SWIPER ===========================
 document.addEventListener("DOMContentLoaded", () => {
   const partnersSwiper = new Swiper(".partners-slider", {
-    loop: true, // Бесконечный цикл
-    speed: 4000, // Скорость движения в миллисекундах (чем больше, тем плавнее)
-    slidesPerView: 2, // Количество логотипов на мобильных
-    spaceBetween: 30, // Отступ между логотипами
-    allowTouchMove: false, // Отключаем ручной свайп для стабильного автоскролла
+    loop: true,
+    speed: 4000,
+    slidesPerView: 2,
+    spaceBetween: 30,
+    allowTouchMove: false,
 
     autoplay: {
-      delay: 0, // Задержка 0 = постоянное движение
+      delay: 0,
       disableOnInteraction: false,
     },
 
-    // Адаптив для разных экранов
     breakpoints: {
       480: {
         slidesPerView: 3,
@@ -62,5 +61,54 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 60,
       },
     },
+  });
+});
+// ===================================================================
+// =========================== VIDEO SWIPER ===========================
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Инициализация Swiper
+  const reviewsSwiper = new Swiper(".reviews-slider", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".review-next-btn",
+    },
+  });
+
+  // 2. Логика видео модалки
+  const videoBtns = document.querySelectorAll(".video-btn");
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("videoIframe");
+  const closeBtn = document.querySelector(".video-modal-close");
+  const overlay = document.querySelector(".video-modal-overlay");
+
+  // Открытие
+  videoBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const videoSrc = btn.getAttribute("data-video");
+      iframe.setAttribute("src", videoSrc);
+      modal.classList.add("active");
+    });
+  });
+
+  // Закрытие
+  const closeModal = () => {
+    modal.classList.remove("active");
+    iframe.setAttribute("src", ""); // Останавливаем воспроизведение видео
+  };
+
+  closeBtn.addEventListener("click", closeModal);
+  overlay.addEventListener("click", closeModal);
+
+  // Закрытие по клавише Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      closeModal();
+    }
   });
 });
