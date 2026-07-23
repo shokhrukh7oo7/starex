@@ -33,3 +33,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // ===================================================================
+// =========================== PARTNER SWIPER ===========================
+document.addEventListener("DOMContentLoaded", () => {
+  const partnersSwiper = new Swiper(".partners-slider", {
+    loop: true, // Бесконечный цикл
+    speed: 4000, // Скорость движения в миллисекундах (чем больше, тем плавнее)
+    slidesPerView: 2, // Количество логотипов на мобильных
+    spaceBetween: 30, // Отступ между логотипами
+    allowTouchMove: false, // Отключаем ручной свайп для стабильного автоскролла
+
+    autoplay: {
+      delay: 0, // Задержка 0 = постоянное движение
+      disableOnInteraction: false,
+    },
+
+    // Адаптив для разных экранов
+    breakpoints: {
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 60,
+      },
+    },
+  });
+});

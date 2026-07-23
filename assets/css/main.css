@@ -698,3 +698,49 @@ body {
   border-radius: var(--br-lg);
 }
 /* GOOGLE MAPS END */
+
+/* PARTNER START */
+.partners-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.partners-section .partners-subtitle {
+  color: var(--black-grey);
+  font-size: var(--fs-xs);
+  letter-spacing: 0;
+  text-align: center;
+  padding-bottom: clamp(8px, 1vw, 16px);
+}
+
+.partners-section .partners-title {
+  color: var(--black);
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.partners-section .partners-slider {
+  width: 100%;
+  padding: clamp(25px, 3vw, 50px) 0;
+}
+
+.partners-section .partners-slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.partners-section .partners-slider .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+.partners-section .partners-slider .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* PARTNER END */
