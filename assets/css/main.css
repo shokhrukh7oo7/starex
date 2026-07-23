@@ -106,11 +106,12 @@ body {
 
 /* HEADER START */
 .hero {
-  height: 100vh;
+  /* height: 100vh; */
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   position: relative;
+  min-height: 1040px;
 
   display: flex;
   flex-direction: column;
@@ -923,8 +924,8 @@ body {
   right: 0;
   background: none;
   border: none;
-  color: white;
-  font-size: 36px;
+  color: var(--white);
+  font-size: 32px;
   cursor: pointer;
 }
 /* VIDEO END */
