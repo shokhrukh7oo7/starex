@@ -190,4 +190,16 @@
   .google-maps-wrapper .map-wrapper iframe {
     aspect-ratio: 2 / 1.5;
   }
+  .blog-wrapper .blog-item-wrapper .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .blog-wrapper .blog-item-wrapper .item .image-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+  .blog-wrapper .blog-item-wrapper .item .image-wrapper img {
+    aspect-ratio: 1 / 1;
+  }
 }

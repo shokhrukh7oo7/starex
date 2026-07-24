@@ -933,3 +933,85 @@ body {
   cursor: pointer;
 }
 /* VIDEO END */
+
+/* BLOG START */
+.blog-wrapper .blog-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+}
+.blog-wrapper .blog-header-wrapper .blog-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.blog-wrapper .blog-header-wrapper .blog-left span {
+  font-weight: 400;
+  font-size: var(--fs-xs);
+  color: var(--text-grey);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.blog-wrapper .blog-header-wrapper .blog-left p {
+  font-weight: 400;
+  font-size: var(--fs-lg);
+  line-height: 130%;
+  letter-spacing: 0;
+  color: var(--black);
+}
+.blog-wrapper .blog-header-wrapper .blog-right a {
+  background-color: #f2f2f2;
+  color: var(--black);
+  font-size: var(--fs-exxs);
+  border-radius: var(--br-md);
+  padding: clamp(8px, 1vw, 16px) clamp(16px, 2vw, 32px);
+}
+
+.blog-wrapper .blog-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 32px);
+  margin: clamp(50px, 5vw, 100px) 0;
+}
+.blog-wrapper .blog-item-wrapper .item {
+  display: flex;
+  gap: clamp(20px, 2.5vw, 40px);
+  align-items: center;
+}
+.blog-wrapper .blog-item-wrapper .item .image-wrapper {
+  height: 250px;
+  width: 250px;
+  flex-shrink: 0;
+}
+.blog-wrapper .blog-item-wrapper .item .image-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--br-lg);
+}
+.blog-wrapper .blog-item-wrapper .item .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.5vw, 24px);
+  flex-grow: 1;
+}
+.blog-wrapper .blog-item-wrapper .item .content-wrapper span {
+  color: var(--text-grey);
+  font-size: calc(var(--fs-exsm) + 2px);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.blog-wrapper .blog-item-wrapper .item .content-wrapper a {
+  color: var(--black);
+  font-size: var(--fs-md);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.blog-wrapper .blog-item-wrapper .item .content-wrapper p {
+  color: var(--text-grey);
+  font-size: var(--fs-xs);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+/* BLOG END */
