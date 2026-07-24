@@ -8,12 +8,11 @@
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: var(--blue);
-    padding: clamp(12px, 1.3vw, 24px) 0;
+    background: var(--white);
     transition: right 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 25px;
     z-index: 1000;
@@ -26,13 +25,47 @@
     flex-direction: column;
   }
   .header-wrapper .mobile-menu .navbar-right-wrapper .navbar-phone-wrapper {
-    align-items: center;
+    align-items: start;
   }
   .mobile-menu.active {
     right: 0;
   }
-  .mobile-menu.active .mobile-close {
+  /* .mobile-menu.active .mobile-close {
     display: block;
+  } */
+  .header-wrapper .navbar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 106px 20px 0;
+  }
+  .header-wrapper .navbar-menu ul li a {
+    color: var(--black);
+    padding-bottom: 5px;
+  }
+  .header-wrapper .navbar-menu ul li a.active {
+    border-bottom: 1px solid var(--black);
+  }
+  .header-wrapper .navbar-right-wrapper .navbar-phone-wrapper span {
+    color: var(--black);
+  }
+  .header-wrapper .navbar-right-wrapper .navbar-phone-wrapper a {
+    color: var(--black);
+  }
+  .mobile-menu.active .mobile-close-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 20px;
+  }
+  .mobile-close-wrapper .logo-wrapper {
+    height: 40px;
+  }
+  .mobile-close-wrapper .logo-wrapper img {
+    max-width: 117px;
   }
 }
 @media (max-width: 992px) {
@@ -116,8 +149,29 @@
   }
 }
 @media (max-width: 576px) {
+  .header-wrapper .navbar-menu {
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+  }
+  .header-wrapper .mobile-menu .navbar-right-wrapper {
+    width: 100%;
+  }
+  .header-wrapper .navbar-right-wrapper .navbar-right-btn-wrapper {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .header-wrapper .navbar-right-wrapper .navbar-right-btn-wrapper button {
+    width: 100%;
+    justify-content: center;
+  }
   .header-wrapper .logo-wrapper img {
     max-width: 117px;
+  }
+  .header-wrapper .mobile-menu .navbar-right-wrapper .navbar-phone-wrapper {
+    width: 100%;
+    padding: 0 20px;
   }
   .spinner-container {
     display: none;
