@@ -231,6 +231,15 @@
     .phone-wrapper {
     align-items: center;
   }
+  .footer-big-logo {
+    display: none;
+  }
+  .copyright-wrapper {
+    flex-direction: column;
+  }
+  .copyright-wrapper .item {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 577px) {

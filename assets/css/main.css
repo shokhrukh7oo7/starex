@@ -1165,4 +1165,34 @@ footer {
   font-size: var(--fs-exxs);
   font-weight: 400;
 }
+.footer-big-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-big-logo img {
+  width: 100%;
+  max-width: 1310px;
+}
+.copyright-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: clamp(25px, 4vw, 50px) 0;
+}
+.copyright-wrapper p {
+  color: var(--white);
+  font-size: var(--fs-exxs);
+  letter-spacing: 0;
+}
+.copyright-wrapper .item {
+  display: flex;
+  gap: 20px;
+}
+.copyright-wrapper .item a {
+  color: var(--white);
+  font-size: var(--fs-exxs);
+  letter-spacing: 0;
+}
 /* FOOTER END */
