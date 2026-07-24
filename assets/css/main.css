@@ -978,7 +978,11 @@ body {
   display: flex;
   gap: clamp(20px, 2.5vw, 40px);
   align-items: center;
+  position: relative;
+  transition: all 0.3s ease-out;
+  border-radius: var(--br-lg);
 }
+
 .blog-wrapper .blog-item-wrapper .item .image-wrapper {
   height: 250px;
   width: 250px;
@@ -1007,6 +1011,12 @@ body {
   font-size: var(--fs-md);
   line-height: 130%;
   letter-spacing: 0;
+}
+
+.blog-wrapper .blog-item-wrapper .item .content-wrapper a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 .blog-wrapper .blog-item-wrapper .item .content-wrapper p {
   color: var(--text-grey);

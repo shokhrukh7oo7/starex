@@ -203,3 +203,15 @@
     aspect-ratio: 1 / 1;
   }
 }
+
+@media (min-width: 577px) {
+  .blog-wrapper .blog-item-wrapper .item:hover {
+    background-color: var(--blue);
+  }
+
+  .blog-wrapper .blog-item-wrapper .item:hover .content-wrapper span,
+  .blog-wrapper .blog-item-wrapper .item:hover .content-wrapper a,
+  .blog-wrapper .blog-item-wrapper .item:hover .content-wrapper p {
+    color: var(--white);
+  }
+}
