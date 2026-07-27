@@ -140,8 +140,11 @@ body {
 .burger-btn span {
   width: 24px;
   height: 2px;
-  background: #fff;
+  background: var(--white);
   transition: 0.3s;
+}
+.another-page-hero .burger-btn span {
+  background: var(--black);
 }
 .mobile-close-wrapper {
   position: absolute;
@@ -188,7 +191,14 @@ body {
 .header-wrapper .navbar-menu ul li a.active {
   border-bottom: 1px solid var(--white);
 }
-
+.another-page-hero .header-wrapper .navbar-menu ul li a {
+  color: var(--black);
+  font-size: var(--fs-xs);
+  padding-bottom: 5px;
+}
+.another-page-hero .header-wrapper .navbar-menu ul li a.active {
+  border-bottom: 1px solid var(--black);
+}
 .header-wrapper .navbar-right-wrapper {
   display: flex;
   align-items: center;
@@ -204,9 +214,23 @@ body {
   font-size: var(--fs-exsm);
   color: var(--white);
 }
+.another-page-hero
+  .header-wrapper
+  .navbar-right-wrapper
+  .navbar-phone-wrapper
+  span {
+  color: var(--black);
+}
 .header-wrapper .navbar-right-wrapper .navbar-phone-wrapper a {
   color: var(--white);
   font-size: var(--fs-xs);
+}
+.another-page-hero
+  .header-wrapper
+  .navbar-right-wrapper
+  .navbar-phone-wrapper
+  a {
+  color: var(--black);
 }
 .header-wrapper .navbar-right-wrapper .navbar-right-btn-wrapper {
   display: flex;
@@ -1025,7 +1049,35 @@ body {
   letter-spacing: 0;
 }
 /* BLOG END */
-
+/* ============================================================= */
+/* CONTACT START */
+.another-page-hero {
+  min-height: auto;
+}
+.contact-banner-wrapper {
+  position: relative;
+}
+.contact-banner-wrapper {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 25% 7% !important;
+  position: relative;
+  min-height: 300px;
+  border-radius: var(--br-xl);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.contact-banner-wrapper h1 {
+  font-weight: 500;
+  color: var(--green);
+  font-size: var(--fs-xl);
+  line-height: 120%;
+  letter-spacing: -1.5px;
+  padding-left: clamp(20px, 4vw, 50px);
+}
+/* CONTACT END */
+/* ============================================================= */
 /* FOOTER START */
 footer {
   background-color: var(--blue);
