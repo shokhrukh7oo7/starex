@@ -252,6 +252,10 @@
   .contact-banner-wrapper {
     min-height: 216px;
   }
+  .contact-bot {
+    min-height: 373px;
+    background-position: 45% 35% !important;
+  }
   .contact-container .contact-right .contact-form .item-wrapper.row {
     grid-template-columns: 1fr;
   }

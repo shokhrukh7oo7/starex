@@ -246,6 +246,7 @@ body {
   border-radius: var(--br-md);
   font-weight: 600;
   border: none;
+  transition: all 0.3s ease-out;
 }
 .header-wrapper .navbar-right-wrapper .navbar-right-btn-wrapper button img {
   width: 15px;
@@ -261,11 +262,31 @@ body {
 .header-wrapper
   .navbar-right-wrapper
   .navbar-right-btn-wrapper
+  button:first-child:hover {
+  background-color: var(--blue);
+  color: var(--green);
+}
+.header-wrapper
+  .navbar-right-wrapper
+  .navbar-right-btn-wrapper
   button:nth-child(2) {
   background-color: var(--blue);
   color: var(--white);
 }
-
+.header-wrapper
+  .navbar-right-wrapper
+  .navbar-right-btn-wrapper
+  button:nth-child(2):hover {
+  background-color: var(--green);
+  color: var(--black);
+}
+.header-wrapper
+  .navbar-right-wrapper
+  .navbar-right-btn-wrapper
+  button:nth-child(2):hover
+  img {
+  filter: brightness(1) invert(1);
+}
 /* calc tab */
 .hero-wrapper {
   display: flex;
@@ -1065,8 +1086,9 @@ body {
   min-height: 300px;
   border-radius: var(--br-xl);
   display: flex;
-  justify-content: start;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 .contact-banner-wrapper h1 {
   font-weight: 500;
@@ -1076,6 +1098,37 @@ body {
   letter-spacing: -1.5px;
   padding-left: clamp(20px, 4vw, 50px);
 }
+.contact-bot {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 25% 35% !important;
+  position: relative;
+  min-height: 537px;
+  margin: clamp(50px, 8vw, 100px) 0;
+}
+.contact-banner-wrapper p {
+  width: 100%;
+  max-width: 672px;
+  color: var(--white);
+  font-size: var(--fs-xs);
+  margin: clamp(16px, 2vw, 32px) 0;
+  padding: 0 clamp(20px, 4vw, 50px);
+}
+.contact-banner-wrapper a {
+  color: var(--blue);
+  background-color: var(--green);
+  font-weight: 600;
+  padding: clamp(10px, 1.5vw, 20px) clamp(20px, 3vw, 40px);
+  border-radius: var(--br-md);
+  font-size: calc(var(--fs-exsm) + 2px);
+  margin-left: clamp(20px, 4vw, 50px);
+  transition: all 0.3s ease-out;
+}
+.contact-banner-wrapper a:hover {
+  color: var(--green);
+  background-color: var(--blue);
+}
+
 .contact-container {
   display: grid;
   grid-template-columns: auto auto;
