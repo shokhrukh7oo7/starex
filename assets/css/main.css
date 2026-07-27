@@ -1164,6 +1164,78 @@ body {
   flex-direction: column;
   gap: clamp(16px, 2vw, 32px);
 }
+.contact-container .contact-right .contact-form .item-wrapper.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.contact-container .contact-right .contact-form .item-wrapper .form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-container
+  .contact-right
+  .contact-form
+  .item-wrapper
+  .form-control
+  label {
+  color: var(--text-grey);
+  font-weight: 400;
+  font-size: var(--fs-exsm);
+}
+.contact-container
+  .contact-right
+  .contact-form
+  .item-wrapper
+  .form-control
+  input,
+.form-control textarea {
+  width: 100%;
+  padding: clamp(15px, 1.5vw, 20px) clamp(20px, 1.5vw, 24px);
+  font-size: var(--fs-exxs);
+  color: #1a1a1a;
+  background-color: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  font-family: inherit;
+}
+.contact-container
+  .contact-right
+  .contact-form
+  .item-wrapper
+  .form-control
+  input::placeholder,
+.form-control textarea::placeholder {
+  color: var(--text-grey);
+}
+.contact-container
+  .contact-right
+  .contact-form
+  .item-wrapper
+  .form-control
+  input:focus,
+.form-control textarea:focus {
+  border-color: var(--blue);
+}
+.contact-container .contact-right .contact-form .submit-btn {
+  font-weight: 600;
+  font-size: calc(var(--fs-exsm) + 2px);
+  padding: clamp(15px, 1.5vw, 20px) 0;
+  border-radius: calc(var(--br-md) + 4px);
+  color: var(--blue);
+  background-color: var(--green);
+  border: none;
+  transition: all 0.3s ease-out;
+}
+.contact-container .contact-right .contact-form .submit-btn:hover {
+  background-color: var(--blue);
+  color: var(--green);
+}
 /* CONTACT END */
 /* ============================================================= */
 /* FOOTER START */

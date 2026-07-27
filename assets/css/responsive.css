@@ -100,6 +100,9 @@
   .extra-section .content-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .contact-container .contact-right .contact-form .item-wrapper.row {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 768px) {
   .hero {
@@ -156,6 +159,12 @@
   }
   .reviews-section .video-btn-text {
     font-size: var(--fs-exsm);
+  }
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-container .contact-right .contact-form .item-wrapper.row {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 576px) {
@@ -242,6 +251,9 @@
   }
   .contact-banner-wrapper {
     min-height: 216px;
+  }
+  .contact-container .contact-right .contact-form .item-wrapper.row {
+    grid-template-columns: 1fr;
   }
 }
 
