@@ -1076,6 +1076,94 @@ body {
   letter-spacing: -1.5px;
   padding-left: clamp(20px, 4vw, 50px);
 }
+.contact-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: clamp(8px, 1vw, 16px);
+  margin: clamp(25px, 4vw, 50px) 0;
+}
+.contact-container .contact-left {
+  background-color: rgba(242, 242, 242, 0.3);
+  border: 1px solid #f2f2f2;
+  border-radius: var(--br-xl);
+  padding: clamp(24px, 2vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 32px);
+}
+.contact-container .contact-left .item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-container .contact-left .item h6 {
+  font-weight: 500;
+  color: var(--black);
+  font-size: var(--fs-md);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.contact-container .contact-left .item .header {
+  font-weight: 400;
+  font-size: var(--fs-xs);
+  color: var(--text-grey);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.contact-container .contact-left .item span {
+  font-weight: 400;
+  font-size: var(--fs-exxs);
+  color: var(--text-grey);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.contact-container .contact-left .item p {
+  font-weight: 400;
+  font-size: var(--fs-xs);
+  color: var(--black);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.contact-container .contact-left .item a {
+  font-weight: 400;
+  font-size: var(--fs-xs);
+  color: var(--blue);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+.contact-container .contact-right {
+  border: 1px solid #f2f2f2;
+  border-radius: var(--br-xl);
+  padding: clamp(24px, 2vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 32px);
+}
+.contact-container .contact-right .item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-container .contact-right .item h6 {
+  font-weight: 500;
+  color: var(--black);
+  font-size: var(--fs-md);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.contact-container .contact-right .item span {
+  font-weight: 400;
+  font-size: var(--fs-xs);
+  color: var(--text-grey);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.contact-container .contact-right .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 32px);
+}
 /* CONTACT END */
 /* ============================================================= */
 /* FOOTER START */

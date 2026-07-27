@@ -240,6 +240,9 @@
   .copyright-wrapper .item {
     flex-direction: column;
   }
+  .contact-banner-wrapper {
+    min-height: 216px;
+  }
 }
 
 @media (min-width: 577px) {
