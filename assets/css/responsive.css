@@ -103,6 +103,9 @@
   .contact-container .contact-right .contact-form .item-wrapper.row {
     grid-template-columns: 1fr;
   }
+  .tarif-wrapper .tarif-item-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 768px) {
   .hero {
@@ -268,6 +271,7 @@
   .clients-banner {
     min-height: auto;
     padding: 50px 20px;
+    margin: 0;
     background-position: 85% 35% !important;
   }
   .clients-banner h1 {
@@ -285,6 +289,16 @@
     margin: 0;
   }
   .clients-banner .banner-btn-wrapper a {
+    width: 100%;
+  }
+  .tarif-wrapper .tarif-info-wrapper {
+    align-items: start;
+  }
+  .tarif-wrapper .tarif-item-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .tarif-wrapper .tarif-item-wrapper .item .item-content .tarif-btn {
+    text-align: center;
     width: 100%;
   }
 }

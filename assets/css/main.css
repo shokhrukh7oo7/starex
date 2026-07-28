@@ -519,14 +519,17 @@ body {
   width: 100%;
   aspect-ratio: 581 / 322;
   overflow: hidden;
+  background-color: #f2f2f2;
+  border-radius: var(--br-md);
 }
 .our-services .our-services-body .item .item-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   display: block;
   border-radius: var(--br-md);
+  mix-blend-mode: darken;
 }
 
 .our-services .our-services-body .item .item-content {
@@ -679,11 +682,13 @@ body {
 .extra-section .content-container .item span {
   font-size: var(--fs-exxs);
   color: var(--black-grey);
+  font-weight: 400;
   line-height: 150%;
   letter-spacing: 0;
 }
 .extra-section .content-container .item p {
   color: var(--white);
+  font-weight: 500;
   font-size: var(--fs-xs);
 }
 /* EXTRA SECTION END */
@@ -1218,7 +1223,7 @@ body {
   background-position: 25% 45% !important;
   position: relative;
   min-height: 450px;
-  margin: clamp(50px, 8vw, 100px) 0;
+  margin: 8px 0;
   border-radius: var(--br-xl);
   display: flex;
   flex-direction: column;
@@ -1274,6 +1279,175 @@ body {
 .clients-banner .banner-btn-wrapper a:last-child:hover {
   background-color: var(--blue);
   color: var(--green);
+}
+.tarif-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  gap: clamp(32px, 4vw, 50px);
+}
+.tarif-wrapper .tarif-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.tarif-wrapper .tarif-header-wrapper span {
+  font-weight: 400;
+  font-size: var(--fs-xs);
+  color: var(--text-grey);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.tarif-wrapper .tarif-header-wrapper h2 {
+  font-weight: 400;
+  font-size: var(--fs-lg);
+  color: var(--black);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.tarif-wrapper .tarif-info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #f2f2f2;
+  border-radius: var(--br-md);
+  padding: 16px;
+  width: 100%;
+}
+.tarif-wrapper .tarif-info-wrapper .icon-wrapper {
+  display: flex;
+  border-radius: 50%;
+  padding: 4px;
+  background-color: var(--green);
+}
+.tarif-wrapper .tarif-info-wrapper .icon-wrapper img {
+  width: 24px;
+  height: 24px;
+}
+.tarif-wrapper .tarif-info-wrapper p {
+  font-weight: 400;
+  font-size: var(--fs-xs);
+  color: var(--text-grey);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.tarif-wrapper .tarif-item-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(4px, 0.5vw, 8px);
+}
+.tarif-wrapper .tarif-item-wrapper .item {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.5vw, 24px);
+  border: 2px solid transparent;
+  padding: 8px;
+  background-color: #f2f2f2;
+  border-radius: var(--br-lg);
+  position: relative;
+  transition: all 0.3s ease-out;
+  height: 100%;
+}
+.tarif-wrapper .tarif-item-wrapper .item:hover {
+  border-color: var(--green);
+  background-color: var(--white);
+}
+.tarif-wrapper .tarif-item-wrapper .item .image-wrapper {
+  width: 100%;
+  aspect-ratio: 581 / 322;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  border-radius: var(--br-md);
+}
+.tarif-wrapper .tarif-item-wrapper .item .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  border-radius: var(--br-md);
+  mix-blend-mode: darken;
+}
+.tarif-wrapper .tarif-item-wrapper .item .item-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  gap: 16px;
+  padding: clamp(8px, 1vw, 16px);
+}
+.tarif-wrapper .tarif-item-wrapper .item .item-content h3 {
+  font-size: var(--fs-md);
+  color: var(--black);
+  font-weight: 500;
+  line-height: 130%;
+}
+.tarif-wrapper .tarif-item-wrapper .item .item-content .price-wrapper {
+  display: flex;
+  align-items: center;
+}
+.tarif-wrapper .tarif-item-wrapper .item .item-content .price-wrapper p {
+  font-size: var(--fs-md);
+  color: var(--blue);
+  font-weight: 500;
+  line-height: 130%;
+}
+.tarif-wrapper .tarif-item-wrapper .item .item-content .price-wrapper p span {
+  font-size: var(--fs-exxs);
+  color: var(--text-grey);
+  font-weight: 400;
+}
+.tarif-wrapper .tarif-item-wrapper .item .item-content .deadline-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.tarif-wrapper
+  .tarif-item-wrapper
+  .item
+  .item-content
+  .deadline-wrapper
+  .icon-wrapper {
+  display: flex;
+  background-color: var(--green);
+  padding: 4px;
+  border-radius: 50%;
+}
+.tarif-wrapper
+  .tarif-item-wrapper
+  .item
+  .item-content
+  .deadline-wrapper
+  .icon-wrapper
+  img {
+  width: 24px;
+  height: 24px;
+}
+.tarif-wrapper .tarif-item-wrapper .item .item-content .deadline-wrapper span {
+  font-size: var(--fs-exxs);
+  color: var(--text-grey);
+  font-weight: 400;
+}
+.tarif-wrapper .tarif-item-wrapper .item .item-content .description {
+  font-size: var(--fs-exxs);
+  color: var(--text-grey);
+  font-weight: 400;
+}
+.tarif-wrapper .tarif-item-wrapper .item .item-content .tarif-btn {
+  font-size: var(--fs-exxs);
+  color: var(--white);
+  font-weight: 400;
+  background-color: var(--blue);
+  border-radius: var(--br-md);
+  padding: 16px clamp(16px, 2vw, 32px);
+}
+.tarif-wrapper .tarif-item-wrapper .item .item-content .tarif-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 /* CLIENTS END */
 /* ============================================================= */
