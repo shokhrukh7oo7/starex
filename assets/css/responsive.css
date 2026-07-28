@@ -303,6 +303,25 @@
   }
 }
 
+@media (max-width: 390px) {
+  .limitation-wrapper
+    .limit-content-container
+    .limit-content-wrapper
+    .limit-item
+    .image-wrapper
+    img {
+    width: 22px;
+    height: 22px;
+  }
+  .limitation-wrapper
+    .limit-content-container
+    .limit-content-wrapper
+    .limit-item
+    p {
+    font-size: 14px;
+  }
+}
+
 @media (min-width: 577px) {
   .blog-wrapper .blog-item-wrapper .item:hover {
     background-color: var(--blue);

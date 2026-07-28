@@ -1284,7 +1284,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0;
+  padding: 50px 0 clamp(50px, 8vw, 100px);
   gap: clamp(32px, 4vw, 50px);
 }
 .tarif-wrapper .tarif-header-wrapper {
@@ -1448,6 +1448,90 @@ body {
   content: "";
   position: absolute;
   inset: 0;
+}
+
+.limitation-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 25% 45% !important;
+  padding: clamp(16px, 4vw, 50px);
+  border-radius: var(--br-lg);
+  margin: 50px 0;
+}
+.limitation-wrapper .limit-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: clamp(24px, 4vw, 50px);
+  background-color: var(--white);
+  border-radius: var(--br-lg);
+  width: 100%;
+  max-width: 828px;
+}
+.limitation-wrapper .limit-content-container .limit-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.limitation-wrapper .limit-content-container .limit-header-wrapper span {
+  font-weight: 400;
+  font-size: var(--fs-xs);
+  color: var(--text-grey);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.limitation-wrapper .limit-content-container .limit-header-wrapper h2 {
+  font-weight: 400;
+  font-size: var(--fs-lg);
+  color: var(--black);
+  line-height: 100%;
+  letter-spacing: 0;
+}
+.limitation-wrapper .limit-content-container .limit-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.limitation-wrapper
+  .limit-content-container
+  .limit-content-wrapper
+  .limit-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1vw, 16px);
+}
+.limitation-wrapper
+  .limit-content-container
+  .limit-content-wrapper
+  .limit-item
+  .image-wrapper {
+  background-color: #eb21214d;
+  border-radius: var(--br-md);
+  padding: 8px;
+  display: flex;
+}
+.limitation-wrapper
+  .limit-content-container
+  .limit-content-wrapper
+  .limit-item
+  .image-wrapper
+  img {
+  width: 24px;
+  height: 24px;
+}
+.limitation-wrapper
+  .limit-content-container
+  .limit-content-wrapper
+  .limit-item
+  p {
+  font-weight: 500;
+  font-size: var(--fs-xs);
+  color: var(--text-grey);
+  line-height: 130%;
+  letter-spacing: 0;
 }
 /* CLIENTS END */
 /* ============================================================= */
