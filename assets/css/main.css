@@ -1215,7 +1215,7 @@ body {
 .clients-banner {
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  background-position: 25% 35% !important;
+  background-position: 25% 45% !important;
   position: relative;
   min-height: 450px;
   margin: clamp(50px, 8vw, 100px) 0;
