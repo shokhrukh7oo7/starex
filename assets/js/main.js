@@ -64,6 +64,40 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // ===================================================================
+// =========================== ACCORDION ===========================
+document.addEventListener("DOMContentLoaded", () => {
+  const accordionItems = document.querySelectorAll(".accordion-item");
+
+  const openItem = (item) => {
+    const content = item.querySelector(".accordion-content");
+    item.classList.add("active");
+    content.style.maxHeight = content.scrollHeight + "px";
+  };
+
+  const closeItem = (item) => {
+    const content = item.querySelector(".accordion-content");
+    item.classList.remove("active");
+    content.style.maxHeight = null;
+  };
+
+  accordionItems.forEach((item) => {
+    if (item.classList.contains("active")) {
+      openItem(item);
+    }
+
+    const header = item.querySelector(".accordion-header");
+
+    header.addEventListener("click", () => {
+      const isOpen = item.classList.contains("active");
+
+      accordionItems.forEach((el) => closeItem(el));
+
+      if (!isOpen) {
+        openItem(item);
+      }
+    });
+  });
+});
 // =========================== VIDEO SWIPER ===========================
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Инициализация Swiper
