@@ -1602,18 +1602,24 @@ body {
 }
 
 .faq-wrapper .accordion .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
 }
 
 .faq-wrapper .accordion .accordion-body {
-  padding-bottom: 24px;
   font-weight: 400;
   font-size: var(--fs-xs);
   line-height: 130%;
   letter-spacing: 0;
   color: var(--text-grey);
+  overflow: hidden;
+}
+.faq-accordion-wrapper .accordion .accordion-item.active .accordion-content {
+  grid-template-rows: 1fr;
+}
+.faq-accordion-wrapper .accordion .accordion-item.active .accordion-body {
+  padding-bottom: 24px;
 }
 /* accordion */
 
