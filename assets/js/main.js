@@ -65,25 +65,81 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // ===================================================================
 // =========================== ACCORDION ===========================
-document.addEventListener('DOMContentLoaded', () => {
-  const accordionItems = document.querySelectorAll('.accordion-item');
+document.addEventListener("DOMContentLoaded", () => {
+  const accordionItems = document.querySelectorAll(".accordion-item");
 
   accordionItems.forEach((item) => {
-    const header = item.querySelector('.accordion-header');
+    const header = item.querySelector(".accordion-header");
 
-    header.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
+    header.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
 
       // Закрываем остальные
-      accordionItems.forEach((el) => el.classList.remove('active'));
+      accordionItems.forEach((el) => el.classList.remove("active"));
 
       // Переключаем текущий
       if (!isActive) {
-        item.classList.add('active');
+        item.classList.add("active");
       }
     });
   });
 });
+// ===================================================================
+// =========================== CALCULATOR ===========================
+document.addEventListener("DOMContentLoaded", () => {
+  const routeSection = document.querySelector(".calc-route-section");
+  const swapBtn = document.getElementById("swap-btn");
+
+  const fromSelect = document.getElementById("from-city");
+  const toSelect = document.getElementById("to-city");
+
+  const fromCard = document.getElementById("from-card");
+  const toCard = document.getElementById("to-card");
+
+  function updateActiveTag(cardElement, selectedValue) {
+    const tags = cardElement.querySelectorAll(".tag-btn");
+    tags.forEach((tag) => {
+      if (tag.dataset.city === selectedValue) {
+        tag.classList.add("active");
+      } else {
+        tag.classList.remove("active");
+      }
+    });
+  }
+
+  function setupTagClicks(cardElement, selectElement) {
+    const tags = cardElement.querySelectorAll(".tag-btn");
+    tags.forEach((tag) => {
+      tag.addEventListener("click", () => {
+        const cityName = tag.dataset.city;
+        selectElement.value = cityName;
+        updateActiveTag(cardElement, cityName);
+      });
+    });
+  }
+
+  setupTagClicks(fromCard, fromSelect);
+  setupTagClicks(toCard, toSelect);
+
+  fromSelect.addEventListener("change", (e) =>
+    updateActiveTag(fromCard, e.target.value),
+  );
+  toSelect.addEventListener("change", (e) =>
+    updateActiveTag(toCard, e.target.value),
+  );
+
+  swapBtn.addEventListener("click", () => {
+    routeSection.classList.toggle("is-swapped");
+
+    const tempValue = fromSelect.value;
+    fromSelect.value = toSelect.value;
+    toSelect.value = tempValue;
+
+    updateActiveTag(fromCard, fromSelect.value);
+    updateActiveTag(toCard, toSelect.value);
+  });
+});
+// ===================================================================
 // =========================== VIDEO SWIPER ===========================
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Инициализация Swiper
@@ -122,8 +178,12 @@ document.addEventListener("DOMContentLoaded", () => {
     iframe.setAttribute("src", ""); // Останавливаем воспроизведение видео
   };
 
-  closeBtn.addEventListener("click", closeModal);
-  overlay.addEventListener("click", closeModal);
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeModal);
+  }
+  if (overlay) {
+    overlay.addEventListener("click", closeModal);
+  }
 
   // Закрытие по клавише Esc
   document.addEventListener("keydown", (e) => {

@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+  </head>
+  <body>
+    <section class="hero another-page-hero">
+      <header>
+        <div class="container">
+          <div class="header-wrapper">
+            <div class="logo-wrapper">
+              <a href="/index.html">
+                <img
+                  src="/assets/images/logo-blue.svg"
+                  alt="STAREX Logo"
+                  class="logo"
+                />
+              </a>
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+              <div class="navbar-menu">
+                <ul>
+                  <li>
+                    <a href="/assets/pages/about.html" class="active">О нас</a>
+                  </li>
+                  <li>
+                    <a href="/assets/pages/services.html">Услуги</a>
+                  </li>
+                  <li>
+                    <a href="/assets/pages/clients.html">Клиентам</a>
+                  </li>
+                  <li>
+                    <a href="/assets/pages/vacancy.html">Вакансии</a>
+                  </li>
+                  <li>
+                    <a href="/assets/pages/blog.html">Блог</a>
+                  </li>
+                  <li>
+                    <a href="/assets/pages/contact.html">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="navbar-right-wrapper">
+                <div class="navbar-phone-wrapper">
+                  <span>пн-пт 10:00-19:00</span>
+                  <a href="tel:+998711234561">+998 (71) 123-45-61</a>
+                </div>
+
+                <div class="navbar-right-btn-wrapper">
+                  <button>Вызвать курьера</button>
+                  <button>
+                    <img src="/assets/images/user.svg" alt="icon" />
+                    Кабинет
+                  </button>
+                </div>
+              </div>
+
+              <div class="mobile-close-wrapper">
+                <div class="logo-wrapper">
+                  <img src="/assets/images/logo.png" alt="image" />
+                </div>
+                <button class="mobile-close" aria-label="Close">
+                  <img src="/assets/images/close.svg" alt="image" />
+                </button>
+              </div>
+            </div>
+
+            <button class="burger-btn" id="burgerBtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <main>
+      <section>
+        <div class="container">
+          <div class="calc-container">
+            <div class="back-wrapper">
+              <a href="#">← Вернуться назад</a>
+            </div>
+
+            <div class="calc-header-wrapper">
+              <span>клиентам</span>
+              <h1>Расчитать стоимость услуги онлайн</h1>
+            </div>
+
+            <div class="calc-wrapper">
+              <div class="calc-route-section">
+                <div class="calc-card" id="from-card">
+                  <h3 class="calc-card-title">Откуда</h3>
+                  <div class="input-field-group">
+                    <label class="field-label">Город/Район</label>
+                    <div class="custom-select-wrapper">
+                      <select class="city-select" id="from-city">
+                        <option value="" disabled selected>
+                          Выбрать из списка
+                        </option>
+                        <option value="Ташкент">Ташкент</option>
+                        <option value="Фергана">Фергана</option>
+                        <option value="Самарканд">Самарканд</option>
+                        <option value="Андижон">Андижон</option>
+                        <option value="Бухара">Бухара</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="quick-tags">
+                    <button
+                      type="button"
+                      class="tag-btn active"
+                      data-city="Ташкент"
+                    >
+                      Ташкент
+                    </button>
+                    <button type="button" class="tag-btn" data-city="Фергана">
+                      Фергана
+                    </button>
+                    <button type="button" class="tag-btn" data-city="Самарканд">
+                      Самарканд
+                    </button>
+                    <button type="button" class="tag-btn" data-city="Андижон">
+                      Андижон
+                    </button>
+                    <button type="button" class="tag-btn" data-city="Бухара">
+                      Бухара
+                    </button>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="swap-btn"
+                  id="swap-btn"
+                  aria-label="Поменять местами"
+                >
+                  <img src="/assets/images/calc/swap.svg" alt="icon" />
+                </button>
+
+                <div class="calc-card" id="to-card">
+                  <h3 class="calc-card-title">Куда</h3>
+                  <div class="input-field-group">
+                    <label class="field-label">Город/Район</label>
+                    <div class="custom-select-wrapper">
+                      <select class="city-select" id="to-city">
+                        <option value="" disabled selected>
+                          Выбрать из списка
+                        </option>
+                        <option value="Ташкент">Ташкент</option>
+                        <option value="Фергана">Фергана</option>
+                        <option value="Самарканд">Самарканд</option>
+                        <option value="Андижон">Андижон</option>
+                        <option value="Бухара">Бухара</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="quick-tags">
+                    <button
+                      type="button"
+                      class="tag-btn active"
+                      data-city="Ташкент"
+                    >
+                      Ташкент
+                    </button>
+                    <button type="button" class="tag-btn" data-city="Фергана">
+                      Фергана
+                    </button>
+                    <button type="button" class="tag-btn" data-city="Самарканд">
+                      Самарканд
+                    </button>
+                    <button type="button" class="tag-btn" data-city="Андижон">
+                      Андижон
+                    </button>
+                    <button type="button" class="tag-btn" data-city="Бухара">
+                      Бухара
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-dimensions">
+                <div class="input-group">
+                  <label for="weight">Вес (кг)*</label>
+                  <input
+                    type="number"
+                    id="weight"
+                    placeholder="Текст"
+                    min="0"
+                    step="0.1"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="width">Ширина (см)*</label>
+                  <input type="number" id="width" placeholder="Текст" min="0" />
+                </div>
+                <div class="input-group">
+                  <label for="length">Длина (см)</label>
+                  <input
+                    type="number"
+                    id="length"
+                    placeholder="Текст"
+                    min="0"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="height">Высота (см)</label>
+                  <input
+                    type="number"
+                    id="height"
+                    placeholder="Текст"
+                    min="0"
+                  />
+                </div>
+              </div>
+
+              <div class="calc-footer">
+                <button type="button" class="calc-submit-btn" id="calc-submit">
+                  РАССЧИТАТЬ СТОИМОСТЬ
+                </button>
+                <span class="calc-note"
+                  >* Для расчета необходимо заполнить все строки</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div
+            class="banner-wrapper"
+            style="
+              background:
+                linear-gradient(
+                  90deg,
+                  rgba(0, 0, 0, 0.85) 0%,
+                  rgba(0, 0, 0, 0.4) 50%,
+                  rgba(0, 0, 0, 0) 100%
+                ),
+                url(&quot;/assets/images/home/banner3.jpg&quot;);
+            "
+          >
+            <h1>Все услуги Starex — прямо в вашем Telegram</h1>
+            <p>
+              Вызывайте курьера, рассчитывайте стоимость и отслеживайте посылки
+              по Узбекистану за пару кликов без перехода на сайт. Быстро, удобно
+              и всегда под рукой.
+            </p>
+            <a href="#">Запустить Telegram-бот</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-item">
+            <div class="logo-wrapper">
+              <img src="/assets/images/logo.png" alt="image" />
+            </div>
+            <p class="under-logo-title">
+              Ваш надежный партнер для быстрой, надежной и безопасной доставки
+              по Узбекистану и всему миру
+            </p>
+            <div class="social-wrapper">
+              <a href="#">
+                <img src="/assets/images/instagram.svg" alt="icon" />
+              </a>
+              <a href="#">
+                <img src="/assets/images/telegram.svg" alt="icon" />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-item">
+            <div class="footer-menu-wrapper">
+              <p>Услуги</p>
+              <ul>
+                <li>
+                  <a href="#">Экспресс-доставка</a>
+                </li>
+                <li>
+                  <a href="#">Международная доставка</a>
+                </li>
+                <li>
+                  <a href="#">Выполнение заказов электронной коммерции</a>
+                </li>
+                <li>
+                  <a href="#">B2B логистика</a>
+                </li>
+                <li>
+                  <a href="#">Отследить посылку</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-item">
+            <div class="footer-menu-wrapper">
+              <p>О компании</p>
+              <ul>
+                <li>
+                  <a href="#">О нас</a>
+                </li>
+                <li>
+                  <a href="#">Клиентам</a>
+                </li>
+                <li>
+                  <a href="#">Вакансии</a>
+                </li>
+                <li>
+                  <a href="#">Блог</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-item">
+            <div class="footer-menu-wrapper">
+              <p>Контакты</p>
+              <div class="footer-list-wrapper">
+                <div class="footer-contact-wrapper">
+                  <div class="phone-wrapper">
+                    <span>пн-пт 10:00-19:00</span>
+                    <a href="tel:+998711234561">+998 (71) 123-45-61</a>
+                  </div>
+                  <button>Вызвать курьера</button>
+                  <a href="#">
+                    <img src="/assets/images/telegram.svg" alt="icon" />
+                  </a>
+                </div>
+
+                <div class="footer-address-wrapper">
+                  <p>Улица Амир Темур. 12. Ташкент. Узбекистан</p>
+                  <a href="mailto:info@starex.uz">info@starex.uz</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-big-logo">
+          <img src="/assets/images/big-logo.png" alt="image" />
+        </div>
+
+        <div class="copyright-wrapper">
+          <p>© 2026 STAREX. Все права защищены.</p>
+          <div class="item">
+            <a href="#">Пользовательское соглашение</a>
+            <a href="#">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
