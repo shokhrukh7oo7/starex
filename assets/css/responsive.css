@@ -301,6 +301,19 @@
     text-align: center;
     width: 100%;
   }
+  .doc-wrapper .doc-item-wrapper .item {
+    flex-direction: column;
+    align-items: start;
+  }
+  .doc-wrapper .doc-item-wrapper .item .download {
+    width: 100%;
+  }
+  .doc-wrapper .doc-item-wrapper .item .download a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 @media (max-width: 390px) {

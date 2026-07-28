@@ -1533,6 +1533,84 @@ body {
   line-height: 130%;
   letter-spacing: 0;
 }
+.doc-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(25px, 4vw, 50px);
+  padding: clamp(25px, 3vw, 50px) 0 clamp(50px, 8vw, 100px);
+}
+.doc-wrapper .doc-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.doc-wrapper .doc-header-wrapper span {
+  color: var(--black-grey);
+  font-size: var(--fs-xs);
+  letter-spacing: 0;
+}
+.doc-wrapper .doc-header-wrapper h2 {
+  color: var(--black);
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.doc-wrapper .doc-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.doc-wrapper .doc-item-wrapper .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(242, 242, 242, 0.4);
+  padding: clamp(24px, 2vw, 32px);
+  border-radius: var(--br-xl);
+  gap: 16px;
+}
+.doc-wrapper .doc-item-wrapper .item .content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.doc-wrapper .doc-item-wrapper .item .content p {
+  font-weight: 400;
+  font-size: var(--fs-sm);
+  color: var(--black);
+  line-height: 130%;
+  letter-spacing: 0;
+  width: 100%;
+  max-width: 700px;
+}
+.doc-wrapper .doc-item-wrapper .item .content .info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.doc-wrapper .doc-item-wrapper .item .content .info img {
+  width: 18px;
+  height: 18px;
+}
+.doc-wrapper .doc-item-wrapper .item .content .info span {
+  font-weight: 400;
+  font-size: var(--fs-exxs);
+  color: var(--black);
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+.doc-wrapper .doc-item-wrapper .item .download a {
+  background-color: var(--green);
+  color: var(--blue);
+  font-weight: 600;
+  font-size: var(--fs-exxs);
+  text-transform: uppercase;
+  border-radius: calc(var(--br-md) + 4px);
+  padding: clamp(10px, 1.5vw, 20px) clamp(20px, 3vw, 40px);
+}
 /* CLIENTS END */
 /* ============================================================= */
 /* CONTACT START */
