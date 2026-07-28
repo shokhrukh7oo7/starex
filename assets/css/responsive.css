@@ -265,6 +265,28 @@
   .vac-wrapper .vac-header-wrapper h1 {
     font-size: 34px;
   }
+  .clients-banner {
+    min-height: 100%;
+    padding: 50px 20px;
+    background-position: 45% 35% !important;
+  }
+  .clients-banner h1 {
+    padding: 0;
+  }
+  .clients-banner p {
+    padding: 0;
+  }
+  .clients-banner .banner-btn-wrapper {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+  .clients-banner .banner-btn-wrapper a {
+    width: 100%;
+  }
 }
 
 @media (min-width: 577px) {

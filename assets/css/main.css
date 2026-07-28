@@ -1211,6 +1211,72 @@ body {
 }
 /* VACANCY END */
 /* ============================================================= */
+/* CLIENTS START */
+.clients-banner {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 25% 35% !important;
+  position: relative;
+  min-height: 450px;
+  margin: clamp(50px, 8vw, 100px) 0;
+  border-radius: var(--br-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.clients-banner h1 {
+  font-weight: 500;
+  color: var(--green);
+  font-size: var(--fs-xl);
+  line-height: 120%;
+  letter-spacing: -1.5px;
+  padding-left: clamp(20px, 4vw, 50px);
+}
+.clients-banner p {
+  width: 100%;
+  max-width: 672px;
+  color: var(--white);
+  font-size: var(--fs-xs);
+  margin: clamp(16px, 2vw, 32px) 0;
+  padding: 0 clamp(20px, 4vw, 50px);
+}
+.clients-banner .banner-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: clamp(20px, 4vw, 50px);
+}
+.clients-banner .banner-btn-wrapper a:first-child {
+  color: var(--blue);
+  background-color: var(--green);
+  font-weight: 600;
+  padding: clamp(10px, 1.5vw, 20px) clamp(20px, 3vw, 40px);
+  border-radius: var(--br-md);
+  font-size: calc(var(--fs-exsm) + 2px);
+  transition: all 0.3s ease-out;
+  text-transform: uppercase;
+}
+.clients-banner .banner-btn-wrapper a:first-child:hover {
+  background-color: var(--blue);
+  color: var(--green);
+}
+.clients-banner .banner-btn-wrapper a:last-child {
+  color: var(--blue);
+  background-color: var(--white);
+  font-weight: 600;
+  padding: clamp(10px, 1.5vw, 20px) clamp(20px, 3vw, 40px);
+  border-radius: var(--br-md);
+  font-size: calc(var(--fs-exsm) + 2px);
+  transition: all 0.3s ease-out;
+  text-transform: uppercase;
+}
+.clients-banner .banner-btn-wrapper a:last-child:hover {
+  background-color: var(--blue);
+  color: var(--green);
+}
+/* CLIENTS END */
+/* ============================================================= */
 /* CONTACT START */
 .another-page-hero {
   min-height: auto;
