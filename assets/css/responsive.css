@@ -166,6 +166,9 @@
   .contact-container .contact-right .contact-form .item-wrapper.row {
     grid-template-columns: 1fr 1fr;
   }
+  .vac-wrapper .vac-content-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 576px) {
   .header-wrapper .navbar-menu {
@@ -258,6 +261,9 @@
   }
   .contact-container .contact-right .contact-form .item-wrapper.row {
     grid-template-columns: 1fr;
+  }
+  .vac-wrapper .vac-header-wrapper h1 {
+    font-size: 34px;
   }
 }
 
