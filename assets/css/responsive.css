@@ -148,6 +148,9 @@
   .future-wrapper .future-item-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
+  .about-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 768px) {
   .hero {
