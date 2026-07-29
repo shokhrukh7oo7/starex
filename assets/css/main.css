@@ -2176,10 +2176,15 @@ body {
   transform: rotate(180deg) scale(1.05);
 }
 
+#from-card {
+  order: 1;
+}
 #swap-route-btn {
   order: 2;
 }
-
+#to-card {
+  order: 3;
+}
 .route-section.is-swapped #from-card {
   order: 3;
 }

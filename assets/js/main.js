@@ -3,12 +3,10 @@ const burgerBtn = document.querySelector(".burger-btn");
 const mobileMenu = document.querySelector(".mobile-menu");
 const mobileClose = document.querySelector(".mobile-close");
 
-// открыть бургер
 burgerBtn?.addEventListener("click", () => {
   mobileMenu.classList.add("active");
 });
 
-// закрыть бургер
 mobileClose?.addEventListener("click", () => {
   mobileMenu.classList.remove("active");
 });
@@ -22,11 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
     tab.addEventListener("click", () => {
       const targetId = tab.dataset.tab;
 
-      // Снимаем active со всех кнопок и панелей
       tabs.forEach((t) => t.classList.remove("active"));
       panes.forEach((p) => p.classList.remove("active"));
 
-      // Активируем текущую кнопку и нужный блок
       tab.classList.add("active");
       document.getElementById(targetId)?.classList.add("active");
     });
@@ -74,10 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
     header.addEventListener("click", () => {
       const isActive = item.classList.contains("active");
 
-      // Закрываем остальные
       accordionItems.forEach((el) => el.classList.remove("active"));
 
-      // Переключаем текущий
       if (!isActive) {
         item.classList.add("active");
       }
@@ -147,14 +141,13 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===================================================================
 // =========================== CURIER ===========================
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. 🔄 ЛОГИКА SWAP (Смена местами "Откуда" и "Куда")
+  // 1. SWAP
   const swapBtn = document.getElementById("swap-route-btn");
   const routeSection = document.querySelector(".route-section");
 
   const fromCard = document.getElementById("from-card");
   const toCard = document.getElementById("to-card");
 
-  // Поля внутри карт
   const getCardFields = (card) => ({
     name: card.querySelector(".field-name"),
     phone: card.querySelector(".field-phone"),
@@ -167,10 +160,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   swapBtn.addEventListener("click", () => {
-    // А) Визуальная перестановка через CSS
     routeSection.classList.toggle("is-swapped");
 
-    // Б) Обмен введенными данными между карточками
     const from = getCardFields(fromCard);
     const to = getCardFields(toCard);
 
@@ -190,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
     swapValue(from.ref, to.ref);
   });
 
-  // 2. ➕ / ➖ СЧЕТЧИКИ ДЛЯ ВЕСА И ГАБАРИТОВ
+  // 2.СЧЕТЧИКИ
   const counterGroups = document.querySelectorAll(".counter-group");
 
   counterGroups.forEach((group) => {
@@ -214,7 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===================================================================
 // =========================== VIDEO SWIPER ===========================
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Инициализация Swiper
   const reviewsSwiper = new Swiper(".reviews-slider", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -228,14 +218,12 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  // 2. Логика видео модалки
   const videoBtns = document.querySelectorAll(".video-btn");
   const modal = document.getElementById("videoModal");
   const iframe = document.getElementById("videoIframe");
   const closeBtn = document.querySelector(".video-modal-close");
   const overlay = document.querySelector(".video-modal-overlay");
 
-  // Открытие
   videoBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       const videoSrc = btn.getAttribute("data-video");
@@ -244,10 +232,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Закрытие
   const closeModal = () => {
     modal.classList.remove("active");
-    iframe.setAttribute("src", ""); // Останавливаем воспроизведение видео
+    iframe.setAttribute("src", "");
   };
 
   if (closeBtn) {
@@ -257,7 +244,6 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.addEventListener("click", closeModal);
   }
 
-  // Закрытие по клавише Esc
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("active")) {
       closeModal();
