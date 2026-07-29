@@ -1776,7 +1776,7 @@ body {
   letter-spacing: 0;
 }
 .about-wrapper .about-image-wrapper img {
-    border-radius: var(--br-lg);
+  border-radius: var(--br-lg);
 }
 .future-wrapper .future-header-wrapper {
   display: flex;
@@ -1855,6 +1855,22 @@ body {
   letter-spacing: 0;
 }
 /* ABOUT PAGE END */
+/* ============================================================= */
+/* BLOG START */
+.all-blog-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: clamp(50px, 5vw, 100px);
+}
+.all-blog-btn-wrapper a {
+  background-color: #f2f2f2;
+  color: var(--black);
+  font-size: var(--fs-exxs);
+  border-radius: var(--br-md);
+  padding: clamp(8px, 1vw, 16px) clamp(16px, 2vw, 32px);
+}
+/* BLOG END */
 /* ============================================================= */
 /* CALCULATOR START */
 .calc-container {
