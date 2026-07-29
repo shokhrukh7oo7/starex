@@ -365,6 +365,10 @@
   .curier-wrapper .radio-options {
     flex-direction: column;
   }
+  .about-banner-wrapper {
+    min-height: 216px;
+    background-position: 80% 20% !important;
+  }
   .future-wrapper .future-item-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
