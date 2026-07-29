@@ -121,6 +121,30 @@
   .calc-wrapper .calc-footer {
     flex-direction: column;
   }
+  .curier-wrapper .curier-card .customer-fields {
+    flex-direction: column;
+    align-items: center;
+  }
+  .curier-wrapper .curier-card .customer-fields .input-group {
+    width: 100%;
+  }
+  .curier-wrapper .route-section {
+    flex-direction: column;
+  }
+  .curier-wrapper .swap-btn {
+    margin: -10px 0;
+    transform: rotate(90deg);
+  }
+  .curier-wrapper .swap-btn:hover {
+    transform: rotate(270deg) scale(1.05);
+  }
+  .curier-wrapper .cargo-grid {
+    grid-template-columns: 1fr;
+  }
+  .curier-wrapper .curier-footer {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 @media (max-width: 768px) {
   .hero {
@@ -185,6 +209,9 @@
     grid-template-columns: 1fr 1fr;
   }
   .vac-wrapper .vac-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .curier-wrapper .curier-card .address-row {
     grid-template-columns: 1fr;
   }
 }
@@ -331,6 +358,9 @@
   }
   .calc-wrapper .calc-dimensions {
     grid-template-columns: 1fr;
+  }
+  .curier-wrapper .radio-options {
+    flex-direction: column;
   }
 }
 

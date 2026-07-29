@@ -121,22 +121,94 @@ document.addEventListener("DOMContentLoaded", () => {
   setupTagClicks(fromCard, fromSelect);
   setupTagClicks(toCard, toSelect);
 
-  fromSelect.addEventListener("change", (e) =>
-    updateActiveTag(fromCard, e.target.value),
-  );
-  toSelect.addEventListener("change", (e) =>
-    updateActiveTag(toCard, e.target.value),
-  );
+  if (fromSelect) {
+    fromSelect.addEventListener("change", (e) =>
+      updateActiveTag(fromCard, e.target.value),
+    );
+  }
+  if (toSelect) {
+    toSelect.addEventListener("change", (e) =>
+      updateActiveTag(toCard, e.target.value),
+    );
+  }
+  if (swapBtn) {
+    swapBtn.addEventListener("click", () => {
+      routeSection.classList.toggle("is-swapped");
+
+      const tempValue = fromSelect.value;
+      fromSelect.value = toSelect.value;
+      toSelect.value = tempValue;
+
+      updateActiveTag(fromCard, fromSelect.value);
+      updateActiveTag(toCard, toSelect.value);
+    });
+  }
+});
+// ===================================================================
+// =========================== CURIER ===========================
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. 🔄 ЛОГИКА SWAP (Смена местами "Откуда" и "Куда")
+  const swapBtn = document.getElementById("swap-route-btn");
+  const routeSection = document.querySelector(".route-section");
+
+  const fromCard = document.getElementById("from-card");
+  const toCard = document.getElementById("to-card");
+
+  // Поля внутри карт
+  const getCardFields = (card) => ({
+    name: card.querySelector(".field-name"),
+    phone: card.querySelector(".field-phone"),
+    region: card.querySelector(".field-region"),
+    district: card.querySelector(".field-district"),
+    street: card.querySelector(".field-street"),
+    house: card.querySelector(".field-house"),
+    apt: card.querySelector(".field-apt"),
+    ref: card.querySelector(".field-ref"),
+  });
 
   swapBtn.addEventListener("click", () => {
+    // А) Визуальная перестановка через CSS
     routeSection.classList.toggle("is-swapped");
 
-    const tempValue = fromSelect.value;
-    fromSelect.value = toSelect.value;
-    toSelect.value = tempValue;
+    // Б) Обмен введенными данными между карточками
+    const from = getCardFields(fromCard);
+    const to = getCardFields(toCard);
 
-    updateActiveTag(fromCard, fromSelect.value);
-    updateActiveTag(toCard, toSelect.value);
+    const swapValue = (fieldA, fieldB) => {
+      const temp = fieldA.value;
+      fieldA.value = fieldB.value;
+      fieldB.value = temp;
+    };
+
+    swapValue(from.name, to.name);
+    swapValue(from.phone, to.phone);
+    swapValue(from.region, to.region);
+    swapValue(from.district, to.district);
+    swapValue(from.street, to.street);
+    swapValue(from.house, to.house);
+    swapValue(from.apt, to.apt);
+    swapValue(from.ref, to.ref);
+  });
+
+  // 2. ➕ / ➖ СЧЕТЧИКИ ДЛЯ ВЕСА И ГАБАРИТОВ
+  const counterGroups = document.querySelectorAll(".counter-group");
+
+  counterGroups.forEach((group) => {
+    const input = group.querySelector(".counter-input");
+    const btnMinus = group.querySelector(".minus");
+    const btnPlus = group.querySelector(".plus");
+
+    btnPlus.addEventListener("click", () => {
+      let val = parseInt(input.value) || 0;
+      input.value = val + 1;
+    });
+
+    btnMinus.addEventListener("click", () => {
+      let val = parseInt(input.value) || 0;
+      if (val > 0) {
+        input.value = val - 1;
+      }
+    });
   });
 });
 // ===================================================================
