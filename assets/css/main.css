@@ -1811,7 +1811,7 @@ body {
   flex-direction: column;
   gap: clamp(25px, 4vw, 50px);
 }
-.about-wrapper .about-content-wrapper h1 {
+.about-wrapper .about-content-wrapper h2 {
   color: var(--black);
   font-size: var(--fs-lg);
   font-weight: 400;
@@ -1840,7 +1840,7 @@ body {
   font-size: var(--fs-xs);
   letter-spacing: 0;
 }
-.future-wrapper .future-header-wrapper h1 {
+.future-wrapper .future-header-wrapper h2 {
   color: var(--black);
   font-size: var(--fs-lg);
   font-weight: 400;
