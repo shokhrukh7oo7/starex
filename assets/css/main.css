@@ -413,6 +413,63 @@ body {
     transform: translateY(2px);
   }
 }
+.hero-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-pagination {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--white);
+  font-family: var(--font-secondary);
+  font-size: 20px;
+}
+
+.hero-page-counter {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 400;
+}
+.hero-page-counter .current {
+  font-size: 32px;
+}
+.hero-page-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.hero-page-btn img {
+  height: 14px;
+}
+
+.hero-page-btn:hover {
+  background-color: var(--green);
+}
+/* --- ЛОГИКА АДАПТИВА (Медиазапросы) --- */
+
+/* ПО УМОЛЧАНИЮ (Десктоп, > 992px) */
+.hero-nav-desktop {
+  display: block; /* Показываем старую кнопку */
+}
+
+.hero-nav-mobile {
+  display: none; /* Скрываем новый блок */
+}
+
+/* -- */
 .hero-wrapper {
   display: flex;
   justify-content: space-between;

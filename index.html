@@ -187,9 +187,31 @@
             </div>
           </div>
 
-          <button class="hero-slider-btn" id="heroSliderBtn">
-            <img src="/assets/images/arrow-bottom.svg" alt="image" />
-          </button>
+          <div class="hero-navigation">
+            <div class="hero-nav-desktop">
+              <button class="hero-slider-btn" id="heroSliderBtn">
+                <img src="/assets/images/arrow-bottom.svg" alt="down" />
+              </button>
+            </div>
+
+            <div class="hero-nav-mobile">
+              <div class="hero-pagination">
+                <button class="hero-page-btn prev" id="heroPrevBtn">
+                  <img src="/assets/images/arrow-left.svg" alt="image" />
+                </button>
+
+                <div class="hero-page-counter">
+                  <span class="current" id="heroCurrentPage">1</span>
+                  <span class="separator">/</span>
+                  <span class="total" id="heroTotalPages">3</span>
+                </div>
+
+                <button class="hero-page-btn next" id="heroNextBtn">
+                  <img src="/assets/images/arrow-right.svg" alt="image" />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

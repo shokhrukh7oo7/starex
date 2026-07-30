@@ -255,20 +255,49 @@ document.addEventListener("DOMContentLoaded", () => {
 // ========================
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".hero-bg-slide");
-  const btn = document.getElementById("heroSliderBtn");
+  const btnDesktop = document.getElementById("heroSliderBtn");
 
-  if (!slides.length || !btn) return;
+  const btnPrevMobile = document.getElementById("heroPrevBtn");
+  const btnNextMobile = document.getElementById("heroNextBtn");
+  const currentCounter = document.getElementById("heroCurrentPage");
+  const totalCounter = document.getElementById("heroTotalPages");
+
+  if (!slides.length) return;
 
   let currentIndex = 0;
 
-  btn.addEventListener("click", () => {
-    // Снимаем класс у текущего
+  if (totalCounter) {
+    totalCounter.textContent = slides.length;
+  }
+
+  function updateSlider(newIndex) {
     slides[currentIndex].classList.remove("active");
 
-    // Переходим к следующему по кругу
-    currentIndex = (currentIndex + 1) % slides.length;
+    currentIndex = newIndex;
 
-    // Добавляем класс новому
     slides[currentIndex].classList.add("active");
-  });
+
+    if (currentCounter) {
+      currentCounter.textContent = currentIndex + 1;
+    }
+  }
+
+  function nextSlide() {
+    let newIndex = (currentIndex + 1) % slides.length;
+    updateSlider(newIndex);
+  }
+
+  function prevSlide() {
+    let newIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider(newIndex);
+  }
+  if (btnDesktop) {
+    btnDesktop.addEventListener("click", nextSlide);
+  }
+  if (btnPrevMobile) {
+    btnPrevMobile.addEventListener("click", prevSlide);
+  }
+  if (btnNextMobile) {
+    btnNextMobile.addEventListener("click", nextSlide);
+  }
 });

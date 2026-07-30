@@ -151,6 +151,12 @@
   .about-wrapper {
     grid-template-columns: 1fr;
   }
+  .hero-nav-desktop {
+    display: none;
+  }
+  .hero-nav-mobile {
+    display: block;
+  }
 }
 @media (max-width: 768px) {
   .hero {
