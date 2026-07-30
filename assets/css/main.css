@@ -473,7 +473,7 @@ body {
 .hero-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
   width: 100%;
 }
 .hero-body {
@@ -590,7 +590,10 @@ body {
   justify-content: center;
   align-items: center;
   bottom: clamp(30px, 5vw, 80px);
-  bottom: 0;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 1;
 }
 
 .spinner-icon {
@@ -625,7 +628,8 @@ body {
 }
 
 .spinner-text text {
-  fill: rgba(255, 255, 255, 0.8);
+  /* fill: rgba(255, 255, 255, 0.8); */
+  fill: var(--black);
   font-size: 17px;
   font-family: sans-serif;
   font-weight: 500;

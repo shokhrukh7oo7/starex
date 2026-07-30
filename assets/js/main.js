@@ -11,6 +11,48 @@ mobileClose?.addEventListener("click", () => {
   mobileMenu.classList.remove("active");
 });
 // ===================================================================
+// =========================== HOME SLIDER ===========================
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".hero-bg-slide");
+  const btnPrev = document.getElementById("heroPrevBtn");
+  const btnNext = document.getElementById("heroNextBtn");
+  const currentCounter = document.getElementById("heroCurrentPage");
+  const totalCounter = document.getElementById("heroTotalPages");
+
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+
+  if (totalCounter) {
+    totalCounter.textContent = slides.length;
+  }
+
+  function updateSlider(newIndex) {
+    slides[currentIndex].classList.remove("active");
+
+    currentIndex = newIndex;
+
+    // Показываем новый
+    slides[currentIndex].classList.add("active");
+
+    if (currentCounter) {
+      currentCounter.textContent = currentIndex + 1;
+    }
+  }
+  if (btnNext) {
+    btnNext.addEventListener("click", () => {
+      const newIndex = (currentIndex + 1) % slides.length;
+      updateSlider(newIndex);
+    });
+  }
+  if (btnPrev) {
+    btnPrev.addEventListener("click", () => {
+      const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlider(newIndex);
+    });
+  }
+});
+// ===================================================================
 // =========================== CALCULATOR TABS ===========================
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".tab-wrapper .tab");
@@ -251,53 +293,4 @@ document.addEventListener("DOMContentLoaded", () => {
       closeModal();
     }
   });
-});
-// ========================
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".hero-bg-slide");
-  const btnDesktop = document.getElementById("heroSliderBtn");
-
-  const btnPrevMobile = document.getElementById("heroPrevBtn");
-  const btnNextMobile = document.getElementById("heroNextBtn");
-  const currentCounter = document.getElementById("heroCurrentPage");
-  const totalCounter = document.getElementById("heroTotalPages");
-
-  if (!slides.length) return;
-
-  let currentIndex = 0;
-
-  if (totalCounter) {
-    totalCounter.textContent = slides.length;
-  }
-
-  function updateSlider(newIndex) {
-    slides[currentIndex].classList.remove("active");
-
-    currentIndex = newIndex;
-
-    slides[currentIndex].classList.add("active");
-
-    if (currentCounter) {
-      currentCounter.textContent = currentIndex + 1;
-    }
-  }
-
-  function nextSlide() {
-    let newIndex = (currentIndex + 1) % slides.length;
-    updateSlider(newIndex);
-  }
-
-  function prevSlide() {
-    let newIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateSlider(newIndex);
-  }
-  if (btnDesktop) {
-    btnDesktop.addEventListener("click", nextSlide);
-  }
-  if (btnPrevMobile) {
-    btnPrevMobile.addEventListener("click", prevSlide);
-  }
-  if (btnNextMobile) {
-    btnNextMobile.addEventListener("click", nextSlide);
-  }
 });

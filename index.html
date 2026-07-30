@@ -165,56 +165,54 @@
               </div>
             </div>
 
-            <div class="spinner-container">
-              <div class="spinner-icon">
-                <a href="#">
-                  <img src="/assets/images/home/telegram.svg" alt="icon" />
-                </a>
-              </div>
-              <svg class="spinner-text" viewBox="0 0 200 200">
-                <defs>
-                  <path
-                    id="textCircle"
-                    d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
-                  />
-                </defs>
-                <text>
-                  <textPath href="#textCircle" startOffset="0%">
-                    Оставить заявку - Оставить заявку -
-                  </textPath>
-                </text>
-              </svg>
-            </div>
-          </div>
-
-          <div class="hero-navigation">
-            <div class="hero-nav-desktop">
-              <button class="hero-slider-btn" id="heroSliderBtn">
-                <img src="/assets/images/arrow-bottom.svg" alt="down" />
+            <div class="hero-pagination">
+              <button
+                class="hero-page-btn prev"
+                id="heroPrevBtn"
+                aria-label="Предыдущий слайд"
+              >
+                <img src="/assets/images/arrow-left.svg" alt="image" />
               </button>
-            </div>
 
-            <div class="hero-nav-mobile">
-              <div class="hero-pagination">
-                <button class="hero-page-btn prev" id="heroPrevBtn">
-                  <img src="/assets/images/arrow-left.svg" alt="image" />
-                </button>
-
-                <div class="hero-page-counter">
-                  <span class="current" id="heroCurrentPage">1</span>
-                  <span class="separator">/</span>
-                  <span class="total" id="heroTotalPages">3</span>
-                </div>
-
-                <button class="hero-page-btn next" id="heroNextBtn">
-                  <img src="/assets/images/arrow-right.svg" alt="image" />
-                </button>
+              <div class="hero-page-counter">
+                <span class="current" id="heroCurrentPage">1</span>
+                <span class="separator">/</span>
+                <span class="total" id="heroTotalPages">3</span>
               </div>
+
+              <button
+                class="hero-page-btn next"
+                id="heroNextBtn"
+                aria-label="Следующий слайд"
+              >
+                <img src="/assets/images/arrow-right.svg" alt="image" />
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="spinner-container">
+      <div class="spinner-icon">
+        <a href="#">
+          <img src="/assets/images/home/telegram.svg" alt="icon" />
+        </a>
+      </div>
+      <svg class="spinner-text" viewBox="0 0 200 200">
+        <defs>
+          <path
+            id="textCircle"
+            d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+          />
+        </defs>
+        <text>
+          <textPath href="#textCircle" startOffset="0%">
+            Оставить заявку - Оставить заявку -
+          </textPath>
+        </text>
+      </svg>
+    </div>
 
     <main>
       <section>
