@@ -2551,7 +2551,7 @@ body {
   justify-content: center;
   align-items: start;
 }
-.contact-banner-wrapper h1 {
+.contact-banner-wrapper h2 {
   font-weight: 500;
   color: var(--green);
   font-size: var(--fs-xl);
