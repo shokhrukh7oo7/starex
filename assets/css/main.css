@@ -1,3 +1,4 @@
+/* FONT AEROPORT */
 @font-face {
   font-family: "Aeroport";
   src: url("../fonts/Aeroport-regular-trial.otf") format("opentype");
@@ -29,6 +30,49 @@
   font-style: normal;
   font-display: swap;
 }
+/* FONT ONEST */
+@font-face {
+  font-family: "Onest";
+  src: url("../fonts/Onest-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Onest";
+  src: url("../fonts/Onest-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Onest";
+  src: url("../fonts/Onest-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Onest";
+  src: url("../fonts/Onest-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Onest";
+  src: url("../fonts/Onest-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Onest";
+  src: url("../fonts/Onest-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   /* colors */
@@ -55,6 +99,10 @@
   --br-lg: 24px;
   --br-xl: 32px;
   --br-xxl: 100px;
+
+  /* font family */
+  --font-primary: "Aeroport", sans-serif;
+  --font-secondary: "Onest", sans-serif;
 }
 
 /* RESET */
@@ -94,7 +142,7 @@ html {
 }
 
 body {
-  font-family: "Aeroport", sans-serif;
+  font-family: var(--font-secondary);
 }
 
 .container {
@@ -185,6 +233,7 @@ body {
 }
 .header-wrapper .navbar-menu ul li a {
   color: var(--white);
+  font-family: var(--font-primary);
   font-size: var(--fs-xs);
   padding-bottom: 5px;
 }

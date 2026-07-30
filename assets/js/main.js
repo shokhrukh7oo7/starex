@@ -159,27 +159,29 @@ document.addEventListener("DOMContentLoaded", () => {
     ref: card.querySelector(".field-ref"),
   });
 
-  swapBtn.addEventListener("click", () => {
-    routeSection.classList.toggle("is-swapped");
+  if (swapBtn) {
+    swapBtn.addEventListener("click", () => {
+      routeSection.classList.toggle("is-swapped");
 
-    const from = getCardFields(fromCard);
-    const to = getCardFields(toCard);
+      const from = getCardFields(fromCard);
+      const to = getCardFields(toCard);
 
-    const swapValue = (fieldA, fieldB) => {
-      const temp = fieldA.value;
-      fieldA.value = fieldB.value;
-      fieldB.value = temp;
-    };
+      const swapValue = (fieldA, fieldB) => {
+        const temp = fieldA.value;
+        fieldA.value = fieldB.value;
+        fieldB.value = temp;
+      };
 
-    swapValue(from.name, to.name);
-    swapValue(from.phone, to.phone);
-    swapValue(from.region, to.region);
-    swapValue(from.district, to.district);
-    swapValue(from.street, to.street);
-    swapValue(from.house, to.house);
-    swapValue(from.apt, to.apt);
-    swapValue(from.ref, to.ref);
-  });
+      swapValue(from.name, to.name);
+      swapValue(from.phone, to.phone);
+      swapValue(from.region, to.region);
+      swapValue(from.district, to.district);
+      swapValue(from.street, to.street);
+      swapValue(from.house, to.house);
+      swapValue(from.apt, to.apt);
+      swapValue(from.ref, to.ref);
+    });
+  }
 
   // 2.СЧЕТЧИКИ
   const counterGroups = document.querySelectorAll(".counter-group");
