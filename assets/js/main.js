@@ -252,3 +252,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+// ========================
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".hero-bg-slide");
+  const btn = document.getElementById("heroSliderBtn");
+
+  if (!slides.length || !btn) return;
+
+  let currentIndex = 0;
+
+  btn.addEventListener("click", () => {
+    // Снимаем класс у текущего
+    slides[currentIndex].classList.remove("active");
+
+    // Переходим к следующему по кругу
+    currentIndex = (currentIndex + 1) % slides.length;
+
+    // Добавляем класс новому
+    slides[currentIndex].classList.add("active");
+  });
+});
