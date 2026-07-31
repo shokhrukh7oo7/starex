@@ -163,6 +163,14 @@
   .single-blog-wrapper .single-content-wrapper .single-first .image-wrapper {
     height: 450px;
   }
+  .single-blog-wrapper .single-content-wrapper .single-second,
+  .single-blog-wrapper .single-content-wrapper .single-third {
+    grid-template-columns: 1fr;
+  }
+  .single-blog-wrapper .single-content-wrapper .single-second .left,
+  .single-blog-wrapper .single-content-wrapper .single-third .right {
+    height: 100%;
+  }
 }
 @media (max-width: 768px) {
   .hero {
@@ -232,6 +240,12 @@
   }
   .curier-wrapper .curier-card .address-row {
     grid-template-columns: 1fr;
+  }
+  .single-blog-wrapper
+    .single-content-wrapper
+    .single-extra-wrapper
+    .extra-content {
+    flex-direction: column;
   }
 }
 @media (max-width: 576px) {
@@ -439,6 +453,18 @@
   }
   .single-blog-wrapper .single-content-wrapper .single-first .image-wrapper {
     height: 200px;
+  }
+  .blog-wrapper .blog-header-wrapper {
+    align-items: start;
+    flex-direction: column;
+  }
+  .blog-wrapper .blog-header-wrapper .blog-right {
+    width: 100%;
+  }
+  .blog-wrapper .blog-header-wrapper .blog-right a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
