@@ -160,6 +160,9 @@
   .single-service-container .content-wrapper {
     grid-template-columns: 1fr;
   }
+  .single-blog-wrapper .single-content-wrapper .single-first .image-wrapper {
+    height: 450px;
+  }
 }
 @media (max-width: 768px) {
   .hero {
@@ -433,6 +436,9 @@
   }
   .single-service-container .content-wrapper .content-right {
     height: 100%;
+  }
+  .single-blog-wrapper .single-content-wrapper .single-first .image-wrapper {
+    height: 200px;
   }
 }
 
