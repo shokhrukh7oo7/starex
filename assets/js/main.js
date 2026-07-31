@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const toCard = document.getElementById("to-card");
 
   function updateActiveTag(cardElement, selectedValue) {
+    if (!cardElement) return;
     const tags = cardElement.querySelectorAll(".tag-btn");
     tags.forEach((tag) => {
       if (tag.dataset.city === selectedValue) {
@@ -144,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function setupTagClicks(cardElement, selectElement) {
+    if (!cardElement || !selectElement) return;
     const tags = cardElement.querySelectorAll(".tag-btn");
     tags.forEach((tag) => {
       tag.addEventListener("click", () => {
@@ -293,4 +295,37 @@ document.addEventListener("DOMContentLoaded", () => {
       closeModal();
     }
   });
+});
+// ===================================================================
+// =========================== MODAL ===========================
+const showBtn = document.getElementById("show-btn");
+const modal = document.getElementById("modal");
+const closeBtn = document.getElementById("close-btn");
+const overlay = document.getElementById("overlay");
+
+const addHidden = () => {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+const removeHidden = () => {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+if (showBtn) {
+  showBtn.addEventListener("click", removeHidden);
+}
+if (closeBtn) {
+  closeBtn.addEventListener("click", addHidden);
+}
+
+if (overlay) {
+  overlay.addEventListener("click", addHidden);
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    addHidden();
+  }
 });

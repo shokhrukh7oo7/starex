@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="navbar-right-btn-wrapper">
-                  <button>Вызвать курьера</button>
+                  <button id="show-btn">Вызвать курьера</button>
                   <button>
                     <img src="/assets/images/user.svg" alt="icon" />
                     Кабинет
@@ -704,6 +704,37 @@
         </div>
       </div>
     </main>
+
+    <div class="modal hidden" id="modal">
+      <button class="close-btn" id="close-btn">
+        <img src="/assets/images/close.svg" alt="image" />
+      </button>
+      <div class="modal-header">
+        <span>вызвать курьеры</span>
+        <h2>Готовы обсудить заказ?</h2>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="input-wrapper">
+            <div class="form-content">
+              <label for="name">Ваше имя</label>
+              <input type="text" placeholder="Tim"/>
+            </div>
+            <div class="form-content">
+              <label for="tel">Телефон</label>
+              <input type="text" placeholder="Введите телефон"/>
+            </div>
+          </div>
+          <button type="submit">Отправить заявку</button>
+          <p>
+            Отправляя заявку, Вы автоматически соглашаетесь с
+            условиями пользовательского соглашения.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div class="overlay hidden" id="overlay"></div>
 
     <footer>
       <div class="container">
