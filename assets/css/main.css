@@ -143,6 +143,9 @@ html {
 
 body {
   font-family: var(--font-secondary);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
@@ -3409,6 +3412,7 @@ body {
 /* ============================================================= */
 /* FOOTER START */
 footer {
+  margin-top: auto;
   background-color: var(--blue);
 }
 .footer-wrapper {
@@ -3707,3 +3711,79 @@ footer {
   z-index: 99;
 }
 /* MODAL END */
+
+/* TRACKING */
+.tracking-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: clamp(25px, 4vw, 50px) auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border: 1px solid #f2f2f2;
+  padding: clamp(24px, 2vw, 32px) clamp(16px, 2vw, 32px);
+  border-radius: var(--br-xl);
+}
+.tracking-wrapper .tracking-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: clamp(8px, 1vw, 16px);
+}
+.tracking-wrapper .tracking-header h1 {
+  font-weight: 500;
+  color: var(--black);
+  font-size: var(--fs-xl);
+  line-height: 100%;
+  letter-spacing: -1.5px;
+}
+.tracking-wrapper .tracking-header p {
+  font-size: var(--fs-xs);
+  color: var(--black-grey);
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+.tracking-wrapper .tracking-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: clamp(16px, 2vw, 32px);
+}
+.tracking-wrapper .tracking-form input {
+  width: 100%;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: calc(var(--br-md) - 4px);
+  font-size: var(--fs-exxs);
+  color: var(--black);
+  outline: none;
+}
+.tracking-wrapper .tracking-form input::placeholder {
+  color: var(--black-grey);
+}
+.tracking-wrapper .tracking-form input:focus {
+  border-color: var(--blue);
+}
+.tracking-wrapper .tracking-form button {
+  background: var(--green);
+  border: none;
+  padding: 20px 40px;
+  border-radius: calc(var(--br-lg) - 4px);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: var(--blue);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.tracking-wrapper .tracking-form button:hover {
+  background-color: var(--blue);
+  color: var(--green);
+}
